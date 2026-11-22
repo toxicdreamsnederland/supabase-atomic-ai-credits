@@ -1,0 +1,55 @@
+{
+  "name": "@dynonode/atomic-ai-credits",
+  "version": "1.0.0",
+  "description": "Race-condition-free PostgreSQL & Supabase atomic AI credit ledger (SELECT ... FOR UPDATE + idempotency key + hard monthly caps)",
+  "type": "module",
+  "main": "./src/index.mjs",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.mjs",
+      "default": "./src/index.mjs"
+    },
+    "./sql/*": "./sql/*"
+  },
+  "files": [
+    "src/",
+    "sql/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/ledger.test.mjs"
+  },
+  "keywords": [
+    "supabase",
+    "postgresql",
+    "ai-credits",
+    "rate-limiting",
+    "idempotency",
+    "row-level-security",
+    "rls",
+    "select-for-update",
+    "nextjs",
+    "saas",
+    "finops",
+    "token-metering"
+  ],
+  "author": "Toxic Dreams (d/b/a DynoNode · KvK 74716344) <support@dynonode.com>",
+  "license": "MIT",
+  "homepage": "https://supalaunch.dynonode.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dynonode/supabase-atomic-ai-credits.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dynonode/supabase-atomic-ai-credits/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
